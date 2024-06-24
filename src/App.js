@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./components/Home/Home";
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import RootLayout from "./Layouts/RootLayout";
+import NotFound from "./Pages/NotFound";
+import ProductPage from "./components/ProductPage/ProductPage";
+import CartContextProvider from "./context/CartContext";
+import CartPage from "./components/CartPage/CartPage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path=":id" element={<ProductPage />} />
+      <Route path="cart" element={<CartPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
     </div>
   );
 }

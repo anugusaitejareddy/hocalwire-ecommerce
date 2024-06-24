@@ -1,0 +1,16 @@
+.wrapper {
+  margin: 48px 0;
+  padding: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px 48px;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  display: flex;
+}
