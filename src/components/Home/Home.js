@@ -1,7 +1,6 @@
 import React from "react";
 import ProductCard from "../ProductCard";
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
 
 function Home() {
   const [products, setProducts] = React.useState([]);
@@ -23,8 +22,6 @@ function Home() {
     <div className={styles.wrapper}>
       {products.map((product) => (
         <ProductCard key={product.id} {...product} />
-        // <Link to={product.id.toString()}>
-        // </Link>
       ))}
     </div>
   );
