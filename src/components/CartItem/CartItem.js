@@ -31,7 +31,7 @@ function CartItem({ image, title, price, description, quantity, id }) {
   }
 
   return (
-    <div>
+    <div className={style.container}>
       <div className={style.wrapper}>
         <div className={style.cartImageWrapper}>
           <img src={image} alt={description} className={style.cartItemImage} />

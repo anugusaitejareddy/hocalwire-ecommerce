@@ -39,6 +39,8 @@
 .detailsWrapper {
   width: 220px;
   flex: 1;
+
+  position: relative;
 }
 
 .productTitle {
@@ -66,7 +68,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(25%, 800%);
+  transform: translate(10%, -120%);
 }
 
 .addToCart {

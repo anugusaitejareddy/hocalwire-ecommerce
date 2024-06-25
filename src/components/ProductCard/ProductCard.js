@@ -41,11 +41,11 @@ function ProductCard({ title, price, description, image, rating, id }) {
         <div className={styles.detailsWrapper}>
           <p className={styles.productTitle}>{title}</p>
           <p>₹ {Math.ceil(price * 80)}</p>
-        </div>
-        <div className={styles.rating}>
-          <p>{rating.rate}⭐</p>
-          <p>|</p>
-          <p>{rating.count}</p>
+          <div className={styles.rating}>
+            <p>{rating.rate}⭐</p>
+            <p>|</p>
+            <p>{rating.count}</p>
+          </div>
         </div>
       </Link>
       <div className={styles.addToCart} onClick={handleAddToCart}>

@@ -1,17 +1,23 @@
-.wrapper {
+.container {
   display: flex;
-  height: 200px;
+  justify-content: center;
+}
+
+.wrapper {
   border: 1px solid hsl(0deg, 0%, 80%);
+
+  display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  width: 50%;
   padding: 16px;
-  margin: auto;
-
+  max-width: 800px;
   background-color: hsl(0, 0%, 95%);
 }
 
 .cartImageWrapper {
+  flex: 1 1 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +26,12 @@
 
 .cartItemImage {
   max-width: 200px;
-  max-height: 100%;
+  max-height: 200px;
 }
 
 .detailsWrapper {
+  flex-grow: 3;
+  flex-basis: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -56,6 +64,14 @@
 }
 
 .removeItem {
+  flex: 1 10000;
+  margin-left: auto;
   margin-left: auto;
   cursor: pointer;
+}
+
+.removeItem span {
+  display: block;
+  width: min-content;
+  margin-left: auto;
 }
